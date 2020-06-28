@@ -23,6 +23,7 @@ app.use('/uploads', express.static('uploads'));
 
 const productRoutes=require('./api/routes/products')
 const orderRoutes=require('./api/routes/order')
+const userRoutes=require('./api/routes/users')
 
 app.use((req,res,next)=>{
     res.header('Access-Control-Allow-Origin', '*')
@@ -39,6 +40,7 @@ app.use((req,res,next)=>{
 
 app.use('/products',productRoutes); 
 app.use('/orders',orderRoutes); 
+app.use('/user',userRoutes); 
 
 //if none of the above routes work
 
